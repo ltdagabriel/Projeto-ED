@@ -8,7 +8,7 @@
  * File:   Class.cpp
  * Author: Gabriel Choptian
  * Author: Caio Cesar Hideo Nakai
- *      
+ *
  * Created on 25 de Maio de 2017, 01:59
  */
 
@@ -32,7 +32,7 @@ vector<Folha*> Gerar_Folhas(string file){
     ifstream myfile;
     vector<Folha*> array;
     myfile.open(file);
-    
+
     char c = myfile.get();
 
   while (myfile.good()) {
@@ -46,9 +46,28 @@ vector<Folha*> Gerar_Folhas(string file){
       if(!ok){
           array.push_back(new Folha(c));
       }
-      
+
     c = myfile.get();
   }
     return array;
 }
 
+Node::Node()
+{
+
+}
+
+Node* Gerar_arvore(vector<Folha*>vetor)
+{
+
+}
+
+void Codificar_Folhas(Node*)
+{
+
+}
+
+void Gravar(vector<Folha*>, string file)
+{
+
+}
