@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Class.cpp
  * Author: Gabriel Choptian
  * Author: Caio Cesar Hideo Nakai
- * 
+ *      gabriel choptian
  * Created on 25 de Maio de 2017, 01:59
  */
 
