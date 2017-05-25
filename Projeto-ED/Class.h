@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Class.h
  * Author: Gabriel Choptian
  * Author: Caio Cesar Hideo Nakai
@@ -35,11 +35,12 @@ private:
 class Node{
 public:
     Node();
-    
+
 private:
     Node *left;
     Node *right;
-    Folha folha;
+    Folha *folha;
+    int frequencia;
 };
 vector<Folha*> Gerar_Folhas(string file);
 Node* Gerar_arvore(vector<Folha*>);
