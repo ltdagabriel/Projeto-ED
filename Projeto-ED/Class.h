@@ -16,6 +16,8 @@
 #define CLASS_H
 
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -39,6 +41,9 @@ private:
     Node *right;
     Folha folha;
 };
-
+vector<Folha*> Gerar_Folhas(string file);
+Node* Gerar_arvore(vector<Folha*>);
+void Codificar_Folhas(Node*);
+void Gravar(vector<Folha*>,string file);
 #endif /* CLASS_H */
 
