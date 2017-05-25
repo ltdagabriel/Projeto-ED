@@ -5,22 +5,24 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   Class.cpp
  * Author: Gabriel Choptian
  * Author: Caio Cesar Hideo Nakai
- *
- * Created on 25 de Maio de 2017, 01:54
- */
-
-#include <cstdlib>
-
-using namespace std;
-
-/*
  * 
+ * Created on 25 de Maio de 2017, 01:59
  */
-int main(int argc, char** argv) {
 
-    return 0;
+#include "Class.h"
+
+Folha::Folha(char letra) {
+    caracter=letra;
+    size=1;
+}
+
+void Folha::add(){
+    size+=1;
+ }
+
+Folha::~Folha() {
 }
 
