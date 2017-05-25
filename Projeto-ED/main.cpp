@@ -24,8 +24,11 @@ int main(int argc, char** argv) {
     if(argc>1){
         file=argv[1];
     }
-    cin>>fil;
-    Gerar_Folhas(file);
+    cin>>file;
+    vector<Folha*> array=Gerar_Folhas(file);
+    for(int i=0;i<array.size();i++){
+        cout<<array[i]->getC()<<" ";
+    }
     return 0;
 }
 
