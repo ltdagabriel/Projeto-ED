@@ -31,7 +31,7 @@ Folha::~Folha() {
 vector<Folha*> Gerar_Folhas(string file){
     ifstream myfile;
     vector<Folha*> array;
-    myfile.open(file);
+    myfile.open(file.c_str(),ios_base::in);
 
     char c = myfile.get();
 
