@@ -8,7 +8,7 @@
  * File:   Class.cpp
  * Author: Gabriel Choptian
  * Author: Caio Cesar Hideo Nakai
- *      gabriel choptian
+ *      
  * Created on 25 de Maio de 2017, 01:59
  */
 
@@ -22,7 +22,33 @@ Folha::Folha(char letra) {
 void Folha::add(){
     frequencia+=1;
  }
+char Folha::getC(){
+    return caracter;
+}
 
 Folha::~Folha() {
+}
+vector<Folha*> Gerar_Folhas(string file){
+    ifstream myfile;
+    vector<Folha*> array;
+    myfile.open(file);
+    
+    char c = myfile.get();
+
+  while (myfile.good()) {
+      int ok=0;
+      for(int i=0;i<array.size();i++){
+          if(array[i]->getC()==c){
+              array[i]->add();
+              ok=1;
+          }
+      }
+      if(!ok){
+          array.push_back(new Folha(c));
+      }
+      
+    c = myfile.get();
+  }
+    return array;
 }
 

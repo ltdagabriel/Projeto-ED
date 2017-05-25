@@ -13,14 +13,19 @@
  */
 
 #include <cstdlib>
-
+#include "Class.h"
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-
+    string file;
+    if(argc>1){
+        file=argv[1];
+    }
+    cin>>fil;
+    Gerar_Folhas(file);
     return 0;
 }
 

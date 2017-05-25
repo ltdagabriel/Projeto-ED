@@ -18,6 +18,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -26,6 +27,7 @@ public:
     Folha(char);
     ~Folha();
     void add();
+    char getC();
 private:
     int frequencia;
     char caracter;
