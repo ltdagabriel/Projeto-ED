@@ -27,7 +27,7 @@ public:
     ~Folha();
     void add();
 private:
-    int size;
+    int frequencia;
     char caracter;
 };
 

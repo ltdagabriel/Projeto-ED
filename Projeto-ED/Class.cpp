@@ -16,11 +16,11 @@
 
 Folha::Folha(char letra) {
     caracter=letra;
-    size=1;
+    frequencia=1;
 }
 
 void Folha::add(){
-    size+=1;
+    frequencia+=1;
  }
 
 Folha::~Folha() {
