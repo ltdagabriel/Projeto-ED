@@ -27,7 +27,6 @@ int main(int argc, char** argv) {
     else
         cin>>file;
     vector<Folha*> array=Gerar_Folhas(file);
-    cout<<array.size();
     for(int i=0;i<array.size();i++){
         cout<<array[i]->getC()<<" ";
     }
