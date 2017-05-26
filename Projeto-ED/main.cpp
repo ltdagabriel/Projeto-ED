@@ -25,10 +25,12 @@ int main(int argc, char** argv) {
         file=argv[1];
     }
     else
-        cin>>file;
+        cout<<"Usar construtor"<<endl;
+    
     vector<Folha*> array=Gerar_Folhas(file);
-    Codificar_Folhas(Gerar_arvore(array),"");
-    Gravar(array,file+".coded");
+    Node* root=Gerar_arvore(array);
+    Codificar_Folhas(root,"");
+    Gravar(array,file);
     return 0;
 }
 

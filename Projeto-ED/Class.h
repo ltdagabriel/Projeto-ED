@@ -61,5 +61,6 @@ void Codificar_Folhas(Node*,string);
 void Gravar(vector<Folha*>,string file);
 void Decodificar();
 void sortVectorFrequencia(vector<Node*>);
+string coded(vector<Folha*>,char);
 #endif /* CLASS_H */
 

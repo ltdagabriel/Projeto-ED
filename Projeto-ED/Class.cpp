@@ -88,24 +88,7 @@ Node::Node(Node* a, Node* b)
     frequencia = a->getFrequencia() + b->getFrequencia();
 }
 
-void sortVectorFrequencia(vector<Node*> vetorNode)
-{
-    int i, j, selecionado;
-    Node* aux;
-    for(i = 0; i < vetorNode.size(); i++){
-        selecionado = i;
-        for(j = i+1; j < vetorNode.size(); j++){
-            if(vetorNode[j]->getFrequencia() < vetorNode[i]->getFrequencia()){
-                selecionado = j;
-            }
-        }
-        if(selecionado != i){
-            aux = vetorNode[selecionado];
-            vetorNode[selecionado] = vetorNode[i];
-            vetorNode[i] = aux;
-        }
-    }
-}
+
 Node* Gerar_arvore(vector<Folha*>vetorFolha)
 {
     int i=0;
@@ -122,9 +105,12 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
         while(vetorNode.size() > 1){
             Node* no = new Node (vetorNode[vetorNode.size()-2], vetorNode[vetorNode.size()-1]);
             vetorNode.pop_back();    
-            vetorNode.pop_back();  
-            vetorNode.push_back(no);
-            sortVectorFrequencia(vetorNode);
+            vetorNode.pop_back();
+            int i=0;
+            while(i<vetorNode.size() && vetorNode[i]->getFrequencia() >= no->getFrequencia()){
+                i++;
+            }
+            vetorNode.insert(vetorNode.begin()+i,no);
         }
     }
     
@@ -147,23 +133,35 @@ void Codificar_Folhas(Node* no,string code)
 void Gravar(vector<Folha*> vec, string file)
 {
     ofstream myfile;
-    myfile.open(file.c_str());
+    string file2=file+"coded";
+    myfile.open(file2.c_str());
     for(int i=0;i<vec.size();i++){
         myfile<<vec[i]->getC()<<" "<<vec[i]->getCode()<<endl;
     }
     myfile<<"- ----"<<endl;
-     for(int i=0;i<vec.size();i++){
-        myfile<<vec[i]->getCode();
-    }
-}
+    ifstream fi;
+    fi.open(file.c_str(),ios_base::in);
+    char c = fi.get();
 
+    while (fi.good()) {
+        myfile<<coded(vec,c);
+    c = fi.get();
+  }
+}
+string coded(vector<Folha*> vec,char letra){
+    int i=0;
+    while( vec[i]->getC()!=letra){
+        i++;
+    }
+    return vec[i]->getCode();
+}
 int Node::getFrequencia()
 {
     return frequencia;
 }
 int Node::isFolha()
 {
-    return (folha==NULL);
+    return (folha!=NULL);
 }
 Node* Node::getL()
 {
