@@ -88,6 +88,10 @@ Node::Node(Node* a, Node* b)
     frequencia = a.getFrequencia() + b.getFrequencia();
 }
 
+void sortVectorFrequencia(vector vetorNode)
+{
+    
+}
 Node* Gerar_arvore(vector<Folha*>vetorFolha)
 {
     int i=0;
