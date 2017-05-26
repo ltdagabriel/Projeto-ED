@@ -28,6 +28,7 @@ public:
     ~Folha();
     void add();
     char getC();
+    int getFrequenciaFolha();
 private:
     int frequencia;
     char caracter;
@@ -38,6 +39,7 @@ class Node{
 public:
     Node();
     Node(Node*, Node*);
+    Node(Folha*);
     int getFrequencia();
 
 private:

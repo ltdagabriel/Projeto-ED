@@ -57,9 +57,28 @@ Node::Node()
 
 }
 
-Node* Gerar_arvore(vector<Folha*>vetor)
+Node::Node(Folha* a)
 {
+    frequencia = a.getFrequenciaFolha();
+    folha = a;
+}
 
+Node::Node(Node* a, Node* b)
+{
+    folha = nullptr;
+    left = a;
+    right = b;
+    frequencia = a.getFrequencia() + b.getFrequencia();
+}
+
+Node* Gerar_arvore(vector<Folha*>vetorFolha)
+{
+    int i=0;
+    vector<Node*> vetorNode;
+    /** CRIAR UM VECTOR DO TIPO NODE **/
+    for(i=0; i < vetorFolha.size; i++){
+        vetorNode.push_back(new Node(vetorFolha[i]));
+    }
 }
 
 void Codificar_Folhas(Node*)
@@ -72,14 +91,11 @@ void Gravar(vector<Folha*>, string file)
 
 }
 
-Node::Node(Node* a, Node* b)
-{
-    folha = nullptr;
-    left = a;
-    right = b;
-    frequencia = a.getFrequencia() + b.getFrequencia();
-}
 int Node::getFrequencia()
+{
+    return frequencia;
+}
+int Folha::getFrequenciaFolha()
 {
     return frequencia;
 }
