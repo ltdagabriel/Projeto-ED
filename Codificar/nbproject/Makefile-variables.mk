@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=projeto-ed
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/projeto-ed
+CND_ARTIFACT_NAME_Debug=codificar
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/codificar
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=projeto-ed.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/projeto-ed.tar
+CND_PACKAGE_NAME_Debug=codificar.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/codificar.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=projeto-ed
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/projeto-ed
+CND_ARTIFACT_NAME_Release=codificar
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/codificar
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=projeto-ed.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/projeto-ed.tar
+CND_PACKAGE_NAME_Release=codificar.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/codificar.tar
 #
 # include compiler specific variables
 #
