@@ -13,12 +13,31 @@
 
 #include "Folha.h"
 
-Folha::Folha() {
+Folha::Folha(char c,string code) {
+    this->letra=c;
+    this->code=code;
 }
 
-Folha::Folha(const Folha& orig) {
-}
 
 Folha::~Folha() {
+}
+string leitura(string file,vector<Folha*> *vec){
+    ifstream myfile;
+    myfile.open(file.c_str(),ios_base::in);
+    string line;
+    if (myfile.is_open())
+    {
+        while (! myfile.eof() )
+        {
+            getline (myfile,line);
+            char c=line[0];
+            string str=line.substr(2);
+            if(str.compare("----")!=0){
+                vec->push_back(new Folha(c,str));
+            }
+        }
+        myfile.close();
+    }
+    return line;
 }
 

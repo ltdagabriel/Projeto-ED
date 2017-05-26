@@ -16,7 +16,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 using namespace std;
+
 class Folha {
 public:
     Folha(char,string);
@@ -26,6 +28,7 @@ private:
     char letra;
     string code;
 };
+string leitura(string file,vector<Folha*>);
 
 #endif /* FOLHA_H */
 

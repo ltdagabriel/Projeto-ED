@@ -15,11 +15,16 @@
 #include "Folha.h" 
 using namespace std;
 
-/*
- * 
- */
 int main(int argc, char** argv) {
-
-    return 0;
+    string file;
+    if(argc>1){
+        file=argv[1];
+    }
+    else{
+        cout<<"File name:";
+        cin>>file;
+    }
+    vector<Folha*> vec;
+    string x=leitura(file,vec);
+    
 }
-
