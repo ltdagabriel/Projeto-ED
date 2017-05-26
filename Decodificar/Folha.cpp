@@ -59,28 +59,27 @@ string Folha::getCode(){
 char Folha::getLetra(){
     return letra;
 }
-void decodificar(string str, vector<Folha*> vectorFolha)
+string decodificar(string str, vector<Folha*> vectorFolha)
 {
     int troca = 0;
     int i, k;
     string frase;
     
-    while(str.size() != 0){
-        i = 0;
+    while(str.size() > 0){
+        i = 1;
         while(troca != 1){
             string sub = str.substr(0, i);
             for(k = 0; k < vectorFolha.size(); k++){
-                if(sub.compare(vectorFolha->getCode()) == 0){
+                if(sub.compare(vectorFolha[k]->getCode()) == 0){
                     troca = 1;
-                    frase += sub;
+                    frase += vectorFolha[k]->getLetra();
                 }
             }
             i++;
         }
         troca = 0;
-        for(k = 0; k < i+1; k++){
-            str.pop_front();
-        }
+        str=str.substr(i);
         
     }
+    return frase;
 }

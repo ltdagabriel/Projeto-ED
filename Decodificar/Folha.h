@@ -32,7 +32,7 @@ private:
 };
 string leitura(string file,vector<Folha*>);
 
-string decodificar(string,vector<Folho*>);
+string decodificar(string,vector<Folha*>);
 
 #endif /* FOLHA_H */
 

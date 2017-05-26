@@ -25,6 +25,5 @@ int main(int argc, char** argv) {
         cin>>file;
     }
     vector<Folha*> vec;
-    string x=leitura(file,vec);
-    
+    cout<<decodificar(leitura(file,vec),vec);
 }
