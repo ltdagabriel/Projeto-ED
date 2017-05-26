@@ -37,6 +37,8 @@ private:
 class Node{
 public:
     Node();
+    Node(Node*, Node*);
+    int getFrequencia();
 
 private:
     Node *left;

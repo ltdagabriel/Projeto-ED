@@ -71,3 +71,15 @@ void Gravar(vector<Folha*>, string file)
 {
 
 }
+
+Node::Node(Node* a, Node* b)
+{
+    folha = nullptr;
+    left = a;
+    right = b;
+    frequencia = a.getFrequencia() + b.getFrequencia();
+}
+int Node::getFrequencia()
+{
+    return frequencia;
+}
