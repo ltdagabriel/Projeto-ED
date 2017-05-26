@@ -27,9 +27,8 @@ int main(int argc, char** argv) {
     else
         cin>>file;
     vector<Folha*> array=Gerar_Folhas(file);
-    for(int i=0;i<array.size();i++){
-        cout<<array[i]->getC()<<" ";
-    }
+    Codificar_Folhas(Gerar_arvore(array),"");
+    Gravar(file+".coded");
     return 0;
 }
 
