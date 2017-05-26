@@ -97,9 +97,9 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
     }
 }
 
-void Codificar_Folhas(Node*no)
+void Codificar_Folhas(Node* no,string code)
 {
-
+    if()
 }
 
 void Gravar(vector<Folha*>, string file)
@@ -114,4 +114,17 @@ int Node::getFrequencia()
 int Folha::getFrequenciaFolha()
 {
     return frequencia;
+}
+int Node::isFolha()
+{
+    return (folha==NULL);
+}
+Node* Node::getL()
+{
+    return left;
+}
+
+Node* Node::getR()
+{
+    return right;
 }
