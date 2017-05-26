@@ -102,8 +102,14 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
 
 void Codificar_Folhas(Node* no,string code)
 {
-    if(no.isFolha()){
-        
+    if(no){
+        Codificar_Folhas(no->getL(),code+"0");
+        Codificar_Folhas(no->getR(),code+"1");
+    
+        if(no.isFolha()){
+            Folha* folha=no->getFolha();
+            folha->setCode(code);
+        }
     }
 }
 
