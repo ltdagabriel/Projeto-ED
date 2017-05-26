@@ -90,7 +90,20 @@ Node::Node(Node* a, Node* b)
 
 void sortVectorFrequencia(vector vetorNode)
 {
-    
+    int i, j, selecionado, Node* aux;
+    for(i = 0; i < vetorNode.size(); i++){
+        selecionado = i;
+        for(j = i+1; j < vetorNode.size(); j++){
+            if(vetorNode[j].getFrequencia() < vetorNode[i].getFrequencia){
+                selecionado = j;
+            }
+        }
+        if(selecionado != i){
+            aux = vetorNode[selecionado];
+            vetorNode[selecionado] = vetorNode[i];
+            vetorNode[i] = aux;
+        }
+    }
 }
 Node* Gerar_arvore(vector<Folha*>vetorFolha)
 {
@@ -110,6 +123,7 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
             vetorNode.pop_back();    
             vetorNode.pop_back();  
             vetorNode.push_back(no);
+            sortVectorFrequencia(vetorNode);
         }
     }
     
