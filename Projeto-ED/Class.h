@@ -28,10 +28,12 @@ public:
     ~Folha();
     void add();
     char getC();
+    void setCode(string);
     int getFrequenciaFolha();
 private:
     int frequencia;
     char caracter;
+    string code;
 };
 
 
@@ -44,6 +46,7 @@ public:
     int isFolha();
     Node* getL();
     Node* getR();
+    Folha* getFolha();
 
 private:
     Node *left;

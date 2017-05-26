@@ -99,7 +99,9 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
 
 void Codificar_Folhas(Node* no,string code)
 {
-    if()
+    if(no.isFolha()){
+        
+    }
 }
 
 void Gravar(vector<Folha*>, string file)
@@ -127,4 +129,11 @@ Node* Node::getL()
 Node* Node::getR()
 {
     return right;
+}
+Folha* Node::getFolha()
+{
+    return folha;
+}
+void Folha::setCode(string code){
+    this->code=code;
 }
