@@ -61,11 +61,13 @@ Node::Node(Folha* a)
 {
     frequencia = a.getFrequenciaFolha();
     folha = a;
+    left = NULL;
+    right = NULL;
 }
 
 Node::Node(Node* a, Node* b)
 {
-    folha = nullptr;
+    folha = NULL;
     left = a;
     right = b;
     frequencia = a.getFrequencia() + b.getFrequencia();
