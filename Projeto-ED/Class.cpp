@@ -83,7 +83,7 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
     }
 }
 
-void Codificar_Folhas(Node*)
+void Codificar_Folhas(Node*no)
 {
 
 }
