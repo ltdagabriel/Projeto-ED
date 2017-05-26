@@ -88,6 +88,13 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
     if(vetorNode.size() == 1){
         return vetorNode[0];
     }
+    else{
+        while(vetorNode.size() > 1){
+            no = new Node (vetorNode[vetorNode.size()-2], vetorNode[vetorNode.size()-1]);
+            vetorNode.pop_back();    
+            vetorNode.pop_back();    
+        }
+    }
 }
 
 void Codificar_Folhas(Node*no)
