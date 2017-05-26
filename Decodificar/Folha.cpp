@@ -23,10 +23,11 @@ Folha::Folha(char c,string code) {
 
 Folha::~Folha() {
 }
-string leitura(string file,vector<Folha*> *vec){
+string readFile(string file,vector<Folha*> vec){
     ifstream myfile;
     myfile.open(file.c_str(),ios_base::in);
     string line;
+    string answer;
     string str;
     char c;
     if (myfile.is_open())
@@ -39,19 +40,15 @@ string leitura(string file,vector<Folha*> *vec){
                 c=line[0];
                 str=line.substr(2);
                 if(str.compare("----")!=0){
-                    vec->push_back(new Folha(c,str));
-                }
-                else{
-                    getline (myfile,str);
+                    vec.push_back(new Folha(c,str));
                 }
             }
             getline (myfile,line);
-            str+=line;
-            
+            answer+=line;
         }
         myfile.close();
     }
-    return str;
+    return answer;
 }
 string Folha::getCode(){
     return code;

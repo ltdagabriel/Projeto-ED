@@ -30,7 +30,7 @@ private:
     char letra;
     string code;
 };
-string leitura(string file,vector<Folha*>);
+string readFile(string file,vector<Folha*>);
 
 string decodificar(string,vector<Folha*>);
 
