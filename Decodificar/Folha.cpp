@@ -27,22 +27,38 @@ string leitura(string file,vector<Folha*> *vec){
     ifstream myfile;
     myfile.open(file.c_str(),ios_base::in);
     string line;
+    string str;
+    char c;
     if (myfile.is_open())
     {
         while (! myfile.eof() )
         {
-            getline (myfile,line);
-            char c=line[0];
-            string str=line.substr(2);
-            if(str.compare("----")!=0){
-                vec->push_back(new Folha(c,str));
+            while(str.compare("----")!=0){
+
+                getline (myfile,line);
+                c=line[0];
+                str=line.substr(2);
+                if(str.compare("----")!=0){
+                    vec->push_back(new Folha(c,str));
+                }
+                else{
+                    getline (myfile,str);
+                }
             }
+            getline (myfile,line);
+            str+=line;
+            
         }
         myfile.close();
     }
-    return line;
+    return str;
 }
-
+string Folha::getCode(){
+    return code;
+}
+char Folha::getLetra(){
+    return letra;
+}
 void decodificar(string str, vector<Folha*> vectorFolha)
 {
     int troca = 0;

@@ -24,13 +24,15 @@ public:
     Folha(char,string);
     virtual ~Folha();
     int verificar(string);
+    string getCode();
+    char getLetra();
 private:
     char letra;
     string code;
 };
 string leitura(string file,vector<Folha*>);
 
-void decodificar(string);
+string decodificar(string,vector<Folho*>);
 
 #endif /* FOLHA_H */
 
