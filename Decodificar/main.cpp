@@ -25,7 +25,11 @@ int main(int argc, char** argv) {
         cin>>file;
     }
     vector<Folha*> vec;
-    string x=readFile(file,vec);
+   
+    string x=readFile(file,&vec);
+     for(int i=0;i<vec.size();i++){
+        vec[i]->print();
+    }
     cout<< x;
-    //cout<< decodificar(x,vec)<<endl;
+    cout<< decodificar(x,vec)<<endl;
 }

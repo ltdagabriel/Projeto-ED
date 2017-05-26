@@ -23,7 +23,7 @@ Folha::Folha(char c,string code) {
 
 Folha::~Folha() {
 }
-string readFile(string file,vector<Folha*> vec){
+string readFile(string file,vector<Folha*> *vec){
     ifstream myfile;
     myfile.open(file.c_str(),ios_base::in);
     string line;
@@ -40,7 +40,7 @@ string readFile(string file,vector<Folha*> vec){
                 c=line[0];
                 str=line.substr(2);
                 if(str.compare("----")!=0){
-                    vec.push_back(new Folha(c,str));
+                    vec->push_back(new Folha(c,str));
                 }
             }
             getline (myfile,line);
@@ -56,16 +56,19 @@ string Folha::getCode(){
 char Folha::getLetra(){
     return letra;
 }
+void Folha::print(){
+    cout<<letra<<" "<<code<<endl;
+}
 string decodificar(string str, vector<Folha*> vectorFolha)
 {
     int troca = 0;
     int i, k;
     string frase;
     
-    while(str.size() > 0){
-        i = 1;
+    while(!str.empty()){
+        i = 0;
         while(troca != 1){
-            string sub = str.substr(0, i);
+            string sub = str.substr(0, i+1);
             for(k = 0; k < vectorFolha.size(); k++){
                 if(sub.compare(vectorFolha[k]->getCode()) == 0){
                     troca = 1;

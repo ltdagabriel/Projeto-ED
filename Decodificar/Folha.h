@@ -26,11 +26,12 @@ public:
     int verificar(string);
     string getCode();
     char getLetra();
+    void print();
 private:
     char letra;
     string code;
 };
-string readFile(string file,vector<Folha*>);
+string readFile(string file,vector<Folha*>*);
 
 string decodificar(string,vector<Folha*>);
 
