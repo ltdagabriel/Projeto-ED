@@ -96,6 +96,8 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
             vetorNode.push_back(no);
         }
     }
+    
+    return vetorNode[0];
 }
 
 void Codificar_Folhas(Node* no,string code)
