@@ -30,5 +30,7 @@ private:
 };
 string leitura(string file,vector<Folha*>);
 
+void decodificar(string);
+
 #endif /* FOLHA_H */
 

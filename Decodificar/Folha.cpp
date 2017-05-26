@@ -11,6 +11,8 @@
  * Created on 26 de Maio de 2017, 18:26
  */
 
+#include <vector>
+
 #include "Folha.h"
 
 Folha::Folha(char c,string code) {
@@ -41,3 +43,18 @@ string leitura(string file,vector<Folha*> *vec){
     return line;
 }
 
+void decodificar(string str, vector<Folha*> vectorFolha)
+{
+    int troca = 0;
+    int i = 0, k;
+    while(str.size != 0){
+        while(troca != 1){
+            string sub = str.substr(0, i);
+            for(k = 0; k < vectorFolha.size(); k++){
+                if(sub.compare(vectorFolha.getCode))
+            }
+        }
+        
+        
+    }
+}
