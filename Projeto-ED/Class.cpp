@@ -74,7 +74,7 @@ Node::Node()
 
 Node::Node(Folha* a)
 {
-    frequencia = a.getFrequenciaFolha();
+    frequencia = a->getFrequenciaFolha();
     folha = a;
     left = NULL;
     right = NULL;
@@ -85,7 +85,7 @@ Node::Node(Node* a, Node* b)
     folha = NULL;
     left = a;
     right = b;
-    frequencia = a.getFrequencia() + b.getFrequencia();
+    frequencia = a->getFrequencia() + b->getFrequencia();
 }
 
 void sortVectorFrequencia(vector vetorNode)
