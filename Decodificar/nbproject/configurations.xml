@@ -4,11 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
+      <itemPath>Folha.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>Folha.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
@@ -25,8 +26,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>../Class.cpp</itemPath>
-    <itemPath>../Class.h</itemPath>
+    <itemPath>main.cpp</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -38,9 +38,9 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="../Class.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Folha.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../Class.h" ex="false" tool="3" flavor2="0">
+      <item path="Folha.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -65,9 +65,9 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="../Class.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Folha.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../Class.h" ex="false" tool="3" flavor2="0">
+      <item path="Folha.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -5,21 +5,20 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   Folha.cpp
  * Author: gabri
- *
- * Created on 26 de Maio de 2017, 14:52
- */
-
-#include <cstdlib>
-#include 
-using namespace std;
-
-/*
  * 
+ * Created on 26 de Maio de 2017, 18:26
  */
-int main(int argc, char** argv) {
 
-    return 0;
+#include "Folha.h"
+
+Folha::Folha() {
+}
+
+Folha::Folha(const Folha& orig) {
+}
+
+Folha::~Folha() {
 }
 
