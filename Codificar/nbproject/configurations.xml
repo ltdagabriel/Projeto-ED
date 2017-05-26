@@ -4,13 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
-      <itemPath>Class.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
-      <itemPath>Class.cpp</itemPath>
-      <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
@@ -27,6 +24,12 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>../Class.cpp</itemPath>
+    <itemPath>../Class.h</itemPath>
+    <itemPath>../Construtor.bat</itemPath>
+    <itemPath>../codificador.exe</itemPath>
+    <itemPath>../main.cpp</itemPath>
+    <itemPath>../test.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -38,11 +41,17 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Class.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../Class.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Class.h" ex="false" tool="3" flavor2="0">
+      <item path="../Class.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../Construtor.bat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../codificador.exe" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../test.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -65,11 +74,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Class.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../Class.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Class.h" ex="false" tool="3" flavor2="0">
+      <item path="../Class.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../Construtor.bat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../codificador.exe" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../test.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

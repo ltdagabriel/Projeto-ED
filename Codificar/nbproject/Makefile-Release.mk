@@ -35,8 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Class.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/_ext/5c0/Class.o \
+	${OBJECTDIR}/_ext/5c0/main.o
 
 
 # C Compiler Flags
@@ -63,15 +63,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/codificar.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/codificar ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Class.o: Class.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/5c0/Class.o: ../Class.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Class.o Class.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/Class.o ../Class.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/5c0/main.o: ../main.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/main.o ../main.cpp
 
 # Subprojects
 .build-subprojects:
@@ -79,7 +79,6 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/codificar.exe
 
 # Subprojects
 .clean-subprojects:
