@@ -30,6 +30,7 @@ public:
     char getC();
     void setCode(string);
     int getFrequenciaFolha();
+    string getCode();
 private:
     int frequencia;
     char caracter;

@@ -19,6 +19,10 @@ Folha::Folha(char letra) {
     frequencia=1;
 }
 
+void Folha::setCode(string code){
+    this->code=code;
+}
+
 void Folha::add(){
     frequencia+=1;
  }
@@ -26,6 +30,14 @@ char Folha::getC(){
     return caracter;
 }
 
+int Folha::getFrequenciaFolha()
+{
+    return frequencia;
+}
+string Folha::getCode()
+{
+    return code;
+}
 Folha::~Folha() {
 }
 vector<Folha*> Gerar_Folhas(string file){
@@ -113,16 +125,20 @@ void Codificar_Folhas(Node* no,string code)
     }
 }
 
-void Gravar(vector<Folha*>, string file)
+void Gravar(vector<Folha*> vec, string file)
 {
-
+    ofstream myfile;
+    myfile.open(file.c_str());
+    for(int i=0;i<vec.size();i++){
+        myfile<<vec[i]->getC()<<" "<<vec[i]->getCode()<<endl;
+    }
+    myfile<<"- ----"<<endl;
+     for(int i=0;i<vec.size();i++){
+        myfile<<vec[i]->getCode();
+    }
 }
 
 int Node::getFrequencia()
-{
-    return frequencia;
-}
-int Folha::getFrequenciaFolha()
 {
     return frequencia;
 }
@@ -142,7 +158,4 @@ Node* Node::getR()
 Folha* Node::getFolha()
 {
     return folha;
-}
-void Folha::setCode(string code){
-    this->code=code;
 }
