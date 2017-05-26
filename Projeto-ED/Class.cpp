@@ -90,9 +90,10 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
     }
     else{
         while(vetorNode.size() > 1){
-            no = new Node (vetorNode[vetorNode.size()-2], vetorNode[vetorNode.size()-1]);
+            Node* no = new Node (vetorNode[vetorNode.size()-2], vetorNode[vetorNode.size()-1]);
             vetorNode.pop_back();    
-            vetorNode.pop_back();    
+            vetorNode.pop_back();  
+            vetorNode.push_back(no);
         }
     }
 }
