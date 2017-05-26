@@ -74,7 +74,7 @@ Node::Node()
 
 Node::Node(Folha* a)
 {
-    frequencia = a.getFrequenciaFolha();
+    frequencia = a->getFrequenciaFolha();
     folha = a;
     left = NULL;
     right = NULL;
@@ -85,16 +85,17 @@ Node::Node(Node* a, Node* b)
     folha = NULL;
     left = a;
     right = b;
-    frequencia = a.getFrequencia() + b.getFrequencia();
+    frequencia = a->getFrequencia() + b->getFrequencia();
 }
 
-void sortVectorFrequencia(vector vetorNode)
+void sortVectorFrequencia(vector<Node*> vetorNode)
 {
-    int i, j, selecionado, Node* aux;
+    int i, j, selecionado;
+    Node* aux;
     for(i = 0; i < vetorNode.size(); i++){
         selecionado = i;
         for(j = i+1; j < vetorNode.size(); j++){
-            if(vetorNode[j].getFrequencia() < vetorNode[i].getFrequencia){
+            if(vetorNode[j]->getFrequencia() < vetorNode[i]->getFrequencia()){
                 selecionado = j;
             }
         }
@@ -136,7 +137,7 @@ void Codificar_Folhas(Node* no,string code)
         Codificar_Folhas(no->getL(),code+"0");
         Codificar_Folhas(no->getR(),code+"1");
     
-        if(no.isFolha()){
+        if(no->isFolha()){
             Folha* folha=no->getFolha();
             folha->setCode(code);
         }

@@ -57,9 +57,9 @@ private:
 };
 vector<Folha*> Gerar_Folhas(string file);
 Node* Gerar_arvore(vector<Folha*>);
-void sortVectorFrequencia(vector);
 void Codificar_Folhas(Node*,string);
 void Gravar(vector<Folha*>,string file);
 void Decodificar();
+void sortVectorFrequencia(vector<Node*>);
 #endif /* CLASS_H */
 

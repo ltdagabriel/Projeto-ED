@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
         cin>>file;
     vector<Folha*> array=Gerar_Folhas(file);
     Codificar_Folhas(Gerar_arvore(array),"");
-    Gravar(file+".coded");
+    Gravar(array,file+".coded");
     return 0;
 }
 
