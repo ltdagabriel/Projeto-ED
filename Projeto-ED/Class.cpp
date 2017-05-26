@@ -54,7 +54,10 @@ vector<Folha*> Gerar_Folhas(string file){
 
 Node::Node()
 {
-
+    frequencia = 0;
+    folha = NULL;
+    left = NULL;
+    right = NULL;
 }
 
 Node::Node(Folha* a)
@@ -78,8 +81,12 @@ Node* Gerar_arvore(vector<Folha*>vetorFolha)
     int i=0;
     vector<Node*> vetorNode;
     /** CRIAR UM VECTOR DO TIPO NODE **/
-    for(i=0; i < vetorFolha.size; i++){
+    for(i=0; i < vetorFolha.size(); i++){
         vetorNode.push_back(new Node(vetorFolha[i]));
+    }
+    
+    if(vetorNode.size() == 1){
+        return vetorNode[0];
     }
 }
 
