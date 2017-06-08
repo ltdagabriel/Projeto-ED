@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     Node* root=Gerar_arvore(array);
     Codificar_Folhas(root,"0");
     Gravar(array,file);
-    cin.get();
+    system("pause");
     return 0;
 }
 

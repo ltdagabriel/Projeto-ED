@@ -5,8 +5,9 @@
  */
 
 /* 
- * File:   Folha.cpp
- * Author: gabri
+ * File:   main.cpp
+ * Author: Gabriel Choptian
+ * Author: Caio Cesar Hideo Nakai
  * 
  * Created on 26 de Maio de 2017, 18:26
  */
@@ -73,7 +74,7 @@ string BittoString(char Bit,int size){
     int c=Bit;
     string code;
     for(int i=128,j=0;i>0 && j<size;i=(i>>1),j++){
-        if( ((c&i)>>7-j) ==1){
+        if( ((c&i)>>(7-j)) ==1){
             code+="1";
         }
         else
@@ -91,7 +92,7 @@ string decodificar(string str, vector<Folha*> vectorFolha)
         i = 0;
         while(troca != 1){
             string sub = str.substr(0, i+1);
-            for(k = 0; k < vectorFolha.size(); k++){
+            for(k = 0; k < (int)vectorFolha.size(); k++){
                 if(sub.compare(vectorFolha[k]->getCode()) == 0){
                     troca = 1;
                     frase += vectorFolha[k]->getLetra();

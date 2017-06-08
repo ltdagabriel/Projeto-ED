@@ -26,6 +26,7 @@ int main(int argc, char** argv) {
     }
     vector<Folha*> vec;
     string x=readFile(file,&vec);
-    int i=vec.size();
     cout<< decodificar(x,vec)<<endl;
+	system("pause");
+	return 0;
 }

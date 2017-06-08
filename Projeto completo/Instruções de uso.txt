@@ -1,0 +1,9 @@
+para o funcionamento correto siga os seguintes passos:
+todos os exemplos feitos em windows
+1 compile o arquivo usando o compilador c++
+ex:
+g++ -Wall main.cpp class.cpp -o NOMEDOARQUIVO
+
+2 execute o arquivo e insira um documento
+ex:
+NOMEDOARQUIVO TEXTO.txt
