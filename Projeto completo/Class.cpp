@@ -145,10 +145,10 @@ void Gravar(vector<Folha*> vec, string file,string file2)
     myfile.open(file2.c_str(), ios_base::binary);
     for(int i=0;i<(int)vec.size();i++){
 		char x1=vec[i]->getC();
-		int x2=stringToBit(vec[i]->getCode());
+		short int x2=stringToBit(vec[i]->getCode());
 		char x3=vec[i]->getCode().size();
         myfile.write((char*)&x1,sizeof(char));
-        myfile.write((char*)&x2,sizeof(int));
+        myfile.write((char*)&x2,sizeof(x2));
         myfile.write((char*)&x3,sizeof(char));
     }
     ifstream myfile2;
@@ -156,9 +156,9 @@ void Gravar(vector<Folha*> vec, string file,string file2)
         
     char c;
 	char x4='*';
-	int x5='*';
+	short int x5='*';
 	myfile.write((char*)&x4,sizeof(char));
-	myfile.write((char*)&x5,sizeof(int));
+	myfile.write((char*)&x5,sizeof(x5));
 	string temp;
         temp="";
         c=myfile2.get();

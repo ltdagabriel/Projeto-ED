@@ -30,7 +30,7 @@ string readFile(string file,vector<Folha*> *vec){
     ifstream myfile;
     myfile.open(file.c_str(),ios_base::binary);
     string answer;
-    int code='x';
+    short int code='x';
     char c='x';
 	char size='x';
 	int size2=0;
@@ -38,7 +38,7 @@ string readFile(string file,vector<Folha*> *vec){
     {
         while(c!='*' && code!='*' && myfile.good()){
             myfile.read((char*)&c,sizeof(char));
-            myfile.read((char*)&code,sizeof(int));
+            myfile.read((char*)&code,sizeof(code));
             myfile.read((char*)&size,sizeof(char));
             size2=size;
             if(c!='*' && code!='*'){
