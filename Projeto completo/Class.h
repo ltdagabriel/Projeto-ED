@@ -58,8 +58,8 @@ private:
 vector<Folha*> Gerar_Folhas(string file);
 Node* Gerar_arvore(vector<Folha*>);
 void Codificar_Folhas(Node*,string);
-void Gravar(vector<Folha*>,string file);
-char stringToBit(string);
+void Gravar(vector<Folha*>,string file,string file2);
+int stringToBit(string);
 void Decodificar();
 void sortVectorFrequencia(vector<Node*>);
 string coded(vector<Folha*>,char);

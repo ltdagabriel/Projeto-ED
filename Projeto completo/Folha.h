@@ -32,7 +32,7 @@ private:
     string code;
 };
 string readFile(string file,vector<Folha*>*);
-string BittoString(char Bit,int size);
+string BittoString(int Bit,int size);
 string decodificar(string,vector<Folha*>);
 
 #endif /* FOLHA_H */

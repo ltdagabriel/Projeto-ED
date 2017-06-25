@@ -126,32 +126,39 @@ void Codificar_Folhas(Node* no,string code)
     
         if(no->isFolha()){
             Folha* folha=no->getFolha();
-            folha->setCode(code);
+            folha->setCode((code.compare("")!=0)?code:"0");
         }
     }
 }
-char stringToBit(string code){
+int stringToBit(string code){
     int c=0;
     for(int i=0;i<(int)code.size();i++){
         if(code[i]=='1'){
-            c=c+(1<<(7-i));
+            c=c+(1<<(((int)code.size()-1)-i));
         }
     }
     return c;
 }
-void Gravar(vector<Folha*> vec, string file)
+void Gravar(vector<Folha*> vec, string file,string file2)
 {
     ofstream myfile;
-    string file2=file+"coded";
-    myfile.open(file2.c_str());
+    myfile.open(file2.c_str(), ios_base::binary);
     for(int i=0;i<(int)vec.size();i++){
-        myfile<<vec[i]->getC()<<stringToBit(vec[i]->getCode())<<(char)vec[i]->getCode().size();
+		char x1=vec[i]->getC();
+		int x2=stringToBit(vec[i]->getCode());
+		char x3=vec[i]->getCode().size();
+        myfile.write((char*)&x1,sizeof(char));
+        myfile.write((char*)&x2,sizeof(int));
+        myfile.write((char*)&x3,sizeof(char));
     }
     ifstream myfile2;
 	myfile2.open(file.c_str(),ios_base::in);
         
     char c;
-    myfile<<"**";
+	char x4='*';
+	int x5='*';
+	myfile.write((char*)&x4,sizeof(char));
+	myfile.write((char*)&x5,sizeof(int));
 	string temp;
         temp="";
         c=myfile2.get();
@@ -161,18 +168,20 @@ void Gravar(vector<Folha*> vec, string file)
             c=myfile2.get();
         }
         myfile2.close();
-        cout<<temp<<" "<<temp.size();
+		char xcx;
         if(temp.size()){
             int xzx=temp.size()%8;
-            char xcx=xzx;
-            myfile<<xcx;        
+            xcx=xzx;
+			myfile.write((char*)&xcx,sizeof(char));
         }
         while(temp.size()>=8){
-            myfile<<stringToBit(temp.substr(0,8));
+			xcx=stringToBit(temp.substr(0,8));
+			myfile.write((char*)&xcx,sizeof(char));
             temp=temp.substr(8);
         }
         if(temp.size()){
-            myfile<<stringToBit(temp);
+			xcx=stringToBit(temp);
+            myfile.write((char*)&xcx,sizeof(char));
         }
     myfile.close();
     
